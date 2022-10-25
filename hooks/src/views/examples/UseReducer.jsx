@@ -3,6 +3,7 @@ import { useReducer } from 'react';
 import PageTitle from '../../components/layout/PageTitle'
 import SectionTitle from './../../components/layout/SectionTitle';
 
+import { numberAdd2, login } from '../../store/actions';
 import { initialState, reducer } from '../../store';
 
 const UseReducer = () => {
