@@ -1,5 +1,6 @@
 import './Content.css'
-import { Routes, Route } from 'react-router-dom'
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 
 import Home from '../../views/examples/Home'
 import NotFound from '../../views/examples/NotFound'
@@ -15,8 +16,8 @@ import UseCustom from '../../views/examples/UseCustom'
 const Content = props => (
     <main className="Content">
         <Routes>
-            <Route path="/home" element={<Home />}/>
-            <Route path="/useState" element={<UseState />}/>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/useState" element={<UseState />} />
             <Route path="/useEffect" element={<UseEffect />} />
             <Route path="/useRef" element={<UseRef />} />
             <Route path="/useCallback" element={<UseCallback />} />
