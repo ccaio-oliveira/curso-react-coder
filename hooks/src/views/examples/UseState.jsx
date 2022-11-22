@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PageTitle from '../../components/layout/PageTitle';
 import SectionTitle from './../../components/layout/SectionTitle';
 
-const UseState = ({}) => {
+const UseState = () => {
     const [count, setCount] = useState(0);
     const [name, setName] = useState('Inicial');
 
