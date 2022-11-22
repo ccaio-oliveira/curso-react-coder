@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import PageTitle from '../../components/layout/PageTitle'
+import React, { useState } from 'react';
+import PageTitle from '../../components/layout/PageTitle';
 import SectionTitle from './../../components/layout/SectionTitle';
 
 const UseState = ({}) => {
     const [count, setCount] = useState(0);
+    const [name, setName] = useState('Inicial');
 
     return (
         <div className="UseState">
@@ -17,11 +18,14 @@ const UseState = ({}) => {
                 <div className="text">
                     <button className="btn" onClick={() => setCount(count + 1)}>+1</button>
                     <button className="btn" onClick={() => setCount(count - 1)}>-1</button>
+                    <button className="btn" onClick={() => setCount(current => current + 1000)}>+1000</button>
                 </div>
             </div>
             <SectionTitle title="Exercício #02" />
+            <span className="text">{name}</span>
+            <input type="text" className="input" value={name} onChange={e => setName(e.target.value)} />
         </div>
     )
 }
 
-export default UseState
+export default UseState;
