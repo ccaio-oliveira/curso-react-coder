@@ -34,8 +34,8 @@ const UseEffect = () => {
     const [parImpar, setParImpar] = useState("");
 
     useEffect(function(){
-        setParImpar(isParImpar(num2))
-    }, [num2])
+        setParImpar(isParImpar(number))
+    }, [number])
 
     return (
         <div className="UseEffect">
@@ -59,7 +59,6 @@ const UseEffect = () => {
                     <span className="text">Par ou Impar: </span>
                     <span className="text red">{parImpar}</span>
                 </div>
-                <input type="number" className="input" value={num2} onChange={e => setNum2(e.target.value)} />
             </div>
         </div>
     )
